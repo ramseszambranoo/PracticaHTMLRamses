@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chiki's Food</title>
+  </head>
+
+  <body>
+    <!--ENCABEZADO DE PAGINA-->
+
+    <header>
+      <!--BARRA DE NAVEGACION-->
+      <nav>
+        <ul>
+          <!--BOTON INICIO-->
+          <li>
+            <button>
+              <a href="#INICIO" style="color: #7e5420">INICIO</a>
+            </button>
+          </li>
+          <!--BOTON COMIDAS-->
+          <li>
+            <button>
+              <a href="#COMIDAS" style="color: #7e5420">COMIDAS</a>
+            </button>
+          </li>
+          <!--BOTON CONTACTO-->
+          <li>
+            <button>
+              <a href="#CONTACTO" style="color: #7e5420">CONTACTO</a>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--CONTENIDO PRINCIPAL-->
+    <main>
+      <img src="images/logorestaurant.jpg" alt="ChikisFood" width="120" />
+      <h1 style="color: #f0aa54">¡Bienvenidos a ChikisFood!</h1>
+
+      <!--SECCION DE COMIDAS-->
+      <section id="COMIDAS" style="background-color: #f3d1a7">
+        <h2>NUESTRAS COMIDAS</h2>
+        <p>ESTOS SON NUESTROS PLATOS</p>
+
+        <div>
+          <button><h3>AREPAS</h3></button>
+          <br />
+          <img src="images/AREPAS.png" alt="Arepas" height="200" />
+        </div>
+        <br />
+        <div>
+          <button><h3>EMPANADAS</h3></button>
+          <br />
+          <img src="images/EMPANADAS.png" alt="EMPANADAS" height="200" />
+        </div>
+        <br />
+        <div>
+          <button><h3>PABELLON</h3></button>
+          <br />
+          <img src="images/PABELLON.png" alt="PABELLON" height="200" />
+        </div>
+      </section>
+    </main>
+
+    <!--PIE DE PAGINA-->
+    <footer id="CONTACTO" style="background-color: rgb(184, 184, 184)">
+      <h2>SUSCRIBETE PARA NUEVAS PROMOCIONES</h2>
+
+      <form action="">
+        <label for="Nombre">Nombre</label>
+        <input type="text" name="Nombre" id="Nombre" required />
+
+        <label for="Apellido">Apellido</label>
+        <input type="text" name="Apellido" id="Apellido" required />
+
+        <label for="email">Correo Electronico</label>
+        <input type="email" name="email" id="email" required />
+
+        <input type="submit" value="Suscribirse" />
+      </form>
+
+      <p>ChikisFood 2025. © Todos los derechos reservados</p>
+      <!--TWITTER-->
+      <img src="images/twiter.png" alt="Twitter" height="20" />
+      <a href="RedesSociales/Twitter.html">Twitter</a>
+      <!--INSTAGRAM-->
+      <img src="images/instagram.png" alt="Instagram" height="20" />
+      <a href="RedesSociales/Instagram.html">Instagram</a>
+      <!--FACEBOOK-->
+      <img src="images/facebook.png" alt="facebook" height="20" />
+      <a href="RedesSociales/Facebook.html">Facebook</a>
+    </footer>
+  </body>
+</html>

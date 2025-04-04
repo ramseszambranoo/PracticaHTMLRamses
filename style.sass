@@ -4,12 +4,10 @@
     font-family: Swis721 BlkCn BT
     box-sizing: border-box
 
-
-
-$ColorPrincipal:#F3D1A7
+$ColorPrincipal: #F3D1A7
 $FontPrincipal: 'Swis721 BlkCn BT'
 $TamanoHeader: 120px
-$ColorFooter:rgba(248, 173, 0, 0.959)
+$ColorFooter: rgba(248, 173, 0, 0.959)
 
 .header
     background-color: $ColorPrincipal
@@ -20,7 +18,7 @@ $ColorFooter:rgba(248, 173, 0, 0.959)
         padding: 20px 20px
         height: $TamanoHeader
         &__logo
-            height:90px
+            height: 90px
             border-radius: 50%
         &__list
             list-style: none
@@ -34,16 +32,16 @@ $ColorFooter:rgba(248, 173, 0, 0.959)
                     font-size: 20px
                     border-radius: 20px
                     color: white
-                    background-color:#9b7e5b
+                    background-color: #9b7e5b
                     &:hover
                         background-color: #4e3c27
                         cursor: pointer
                         transition: 0.5s
 
-$ColorPrincipal:#F3D1A7
+$ColorPrincipal: #F3D1A7
 $TamanoMain: 200px
-$FondoRestaurante:"images/fondorestaurante.png"
-$FondoMain:"images/fondo.jpg"
+$FondoRestaurante: "images/fondorestaurante.png"
+$FondoMain: "images/fondo.jpg"
 
 .main
     &__section
@@ -55,12 +53,11 @@ $FondoMain:"images/fondo.jpg"
         height: $TamanoMain
         background-repeat: no-repeat
         background-size: cover
-        
+
         &__h1
             color: #F3D1A7
             font-size: 50px
             text-shadow: 0px 5px 10px #73624d
-            
 
 @mixin flex-box($justify:center, $align:center,$direction:row,$display:flex)
     display: $display
@@ -101,22 +98,21 @@ $FondoMain:"images/fondo.jpg"
     height: $height
     border-radius: $border-radius
     box-shadow: $box-shadow
-    
-.comidas__div__foto
-        @include imagen(200px, 200px, 10%, 5px 5px 5px 0px)
 
+.comidas__div__foto
+    @include imagen(200px, 200px, 10%, 5px 5px 5px 0px)
 
 @mixin boton1($paddig, $font-size, $border-radius, $color, $background-color,$FontW, $border)
     padding: $paddig
     font-size: $font-size
     border-radius: $border-radius
-    color:$color
+    color: $color
     background-color: $background-color
     font-weight: $FontW
     border: $border
 
 .comidas__div__button
-        @include boton1(5px 10px, 25px, 20px, white, #9b7e5b, 900, none)
+    @include boton1(5px 10px, 25px, 20px, white, #9b7e5b, 900, none)
 
 .contenedor-comidas
     padding: 20px
@@ -134,14 +130,13 @@ $FondoMain:"images/fondo.jpg"
     width: 33%
     position: relative
     @include flex-box(center, center, column, flex)
-    height: 100%  
-    gap: 10px  
+    height: 100%
+    gap: 10px
     &:hover
         background-color: rgba(62, 51, 29, 0.9)
         cursor: pointer
         scale: 1.02
         transition: 0.5s ease
-    
 
 .h3
     color: #ffffff
@@ -171,7 +166,7 @@ $FondoMain:"images/fondo.jpg"
     width: 80px
     border: none
     &:hover
-        border-color: #4E3C27 
+        border-color: #4E3C27
 
 .label
     gap: 5px
@@ -193,25 +188,6 @@ $FondoMain:"images/fondo.jpg"
         background-color: #ffffff
         color: black
         transition: 0.5s ease
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-
-
-
-
-
-
 
 .footer
     margin-top: 80px
@@ -257,7 +233,7 @@ $FondoMain:"images/fondo.jpg"
             display: flex
             width: 200px
             &__image
-                
+
                 height: 30px
             &__a
                 text-decoration: none
@@ -273,10 +249,3 @@ $FondoMain:"images/fondo.jpg"
                     cursor: pointer
     &__credits
         color: black
-
-
-
-
-
-
-

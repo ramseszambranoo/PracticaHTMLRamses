@@ -1,0 +1,74 @@
+*
+    padding: 0
+    margin: 0
+    font-family: sans-serif
+    box-sizing: border-box
+
+$ColorPrincipal:#F3D1A7
+$FontPrincipal: 'sans-serif'
+$TamanoHeader: 120px
+$ColorFooter:rgba(248, 173, 0, 0.959)
+
+.header
+    background-color: $ColorPrincipal
+    &__nav
+        justify-content: space-between
+        align-items: center
+        display: flex
+        padding: 20px 20px
+        height: $TamanoHeader
+        &__logo
+            height:90px
+            border-radius: 50%
+        &__list
+            list-style: none
+            display: flex
+            justify-content: center
+            gap: 20px
+            &__boton
+                a
+                    text-decoration: none
+                    padding: 10px
+                    font-size: 20px
+                    border-radius: 20px
+                    color: white
+                    background-color:#9b7e5b
+                    &:hover
+                        background-color: #4e3c27
+                        cursor: pointer
+                        transition: 0.5s
+
+$ColorPrincipal:#F3D1A7
+$TamanoMain: 200px
+$FondoRestaurante:"images/fondorestaurante.png"
+
+.main
+    &__section
+        padding: 10px 20px
+        background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url($FondoRestaurante)
+        height: $TamanoMain
+        background-repeat: no-repeat
+        background-size: cover
+        &__h1
+            color: white
+            font-size: 50px
+            
+            
+
+@mixin imagen($tamano: auto, )
+    
+    
+            
+
+
+
+footer
+    display: flex
+    justify-content: space-evenly
+    gap: 50px
+    background-color: $ColorFooter
+
+
+
+
+

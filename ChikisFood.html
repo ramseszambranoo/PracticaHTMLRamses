@@ -5,54 +5,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chiki's Food</title>
+    <link rel="stylesheet" href="style.css">
+
+  
+      
+    
     </head>
   <body>
     <!--ENCABEZADO DE PAGINA-->
 
-    <header>
+    <header class="header">
       <!--BARRA DE NAVEGACION-->
-      <nav>
-        <img src="images/logorestaurant.jpg" alt="logorestaurant" height="120">
-        <ul>
+      <nav class="header__nav">
+        
+        <img class="header__nav__logo" src="images/logorestaurant.jpg" alt="logorestaurant">
+
+        <ul class="header__nav__list">
           <!--BOTON INICIO-->
-          <li>
-            <button>
-              <a href="#INICIO" style="color: #7e5420">INICIO</a>
-            </button>
+          <li class="header__nav__list__boton">
+            
+              <a href="#INICIO" >INICIO</a>
+            
           </li>
           <!--BOTON COMIDAS-->
-          <li>
-            <button>
-              <a href="#COMIDAS" style="color: #7e5420">COMIDAS</a>
-            </button>
+          <li class="header__nav__list__boton">
+            
+              <a href="#COMIDAS" >COMIDAS</a>
+            
           </li>
           <!--BOTON CONTACTO-->
-          <li>
-            <button>
-              <a href="#CONTACTO" style="color: #7e5420">CONTACTO</a>
-            </button>
+          <li class="header__nav__list__boton">
+            
+              <a href="#CONTACTO" >CONTACTO</a>
+            
           </li>
         </ul>
       </nav>
     </header>
 
     <!--CONTENIDO PRINCIPAL-->
-    <main>
-      <img src="images/fondorestaurante.png" alt="ChikisFood" width="800"/>
-      <h1 style="color: #f0aa54">¡Bienvenidos a ChikisFood!</h1>
+    <main class="main">
+
+      <section class="main__section">
+
+      <h1 class="main__section__h1">¡Bienvenidos a ChikisFood!</h1>
+
+    </section>
+
+
 
       <!--SECCION DE COMIDAS-->
-      <section id="COMIDAS" style="background-color: #f3d1a7">
-        <h2>NUESTRAS COMIDAS</h2>
-        <p>ESTOS SON NUESTROS PLATOS</p>
+      <section class="comidas">
+        <h2 class="comidas__h2">NUESTRAS COMIDAS</h2>
+        <p class="comidas__p">ESTOS SON NUESTROS PLATOS</p>
         <!--AREPAS-->
-        <div>
-          <button><h3>AREPAS</h3></button>
-          <br />
-          <img src="images/AREPAS.png" alt="Arepas" height="200" />
+        <div class="comidas__div">
+          <button class="comidas__div__button">AREPAS</button>
+          <img class="comidas__div__foto" src="images/AREPAS.png" alt="Arepas" height="200" />
           <h3>ESCOGE TU RELLENO:</h3>
 
-          <ul>
+          <ul >
             <label for="sabores">
               <input type="radio" name="sabores" id="sabores" />
               POLLO
@@ -65,6 +77,7 @@
               CARNE
             </label>
           </ul>
+          
           <ul>
             <label for="sabores">
               <input type="radio" name="sabores" id="sabores" />
@@ -87,6 +100,8 @@
             ><button>→ HAZ TU PEDIDO AQUI ←</button></a
           >
         </div>
+
+
         <!--EMPANADAS-->
         <br />
         <div>
@@ -172,6 +187,7 @@
           >
         </div>
         <br />
+        
       </section>
     </main>
 

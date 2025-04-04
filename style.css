@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #F3D1A7;
+}
+.header__nav {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 20px 20px;
+  height: 120px;
+}
+.header__nav__logo {
+  height: 90px;
+  border-radius: 50%;
+}
+.header__nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.header__nav__list__boton a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 20px;
+  color: white;
+  background-color: #9b7e5b;
+}
+.header__nav__list__boton a:hover {
+  background-color: #4e3c27;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.main__section {
+  padding: 10px 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/fondorestaurante.png");
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main__section__h1 {
+  color: white;
+  font-size: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  background-color: rgba(248, 173, 0, 0.959);
+}
+
+/*# sourceMappingURL=style.css.map */

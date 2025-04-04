@@ -41,6 +41,7 @@ $ColorFooter:rgba(248, 173, 0, 0.959)
 $ColorPrincipal:#F3D1A7
 $TamanoMain: 200px
 $FondoRestaurante:"images/fondorestaurante.png"
+$FondoMain:"images/fondo.jpg"
 
 .main
     &__section
@@ -59,8 +60,8 @@ $FondoRestaurante:"images/fondorestaurante.png"
             text-shadow: 0px 5px 10px #73624d
             
 
-@mixin flex-box($justify:center, $align:center,$direction:row)
-    display: flex
+@mixin flex-box($justify:center, $align:center,$direction:row,$display:flex)
+    display: $display
     justify-content: $justify
     align-items: $align
     flex-direction: $direction
@@ -68,13 +69,16 @@ $FondoRestaurante:"images/fondorestaurante.png"
 .main__comidas
     &__titulo
         @include flex-box()
+        flex: wrap
         &__h2
             padding: 10px 10px
             color: #4E3C27
             font-size: 80px
             align-content: center
             font-weight: 900
+            flex: wrap
     &__titulo2
+        margin-bottom: 10px
         @include flex-box()
         &__p
             padding: 10px 10px
@@ -90,6 +94,122 @@ $FondoRestaurante:"images/fondorestaurante.png"
                 cursor: pointer
                 transition: 0.5s ease
 
+@mixin imagen($width, $height, $border-radius, $box-shadow)
+    width: $width
+    height: $height
+    border-radius: $border-radius
+    box-shadow: $box-shadow
+    
+.comidas__div__foto
+        @include imagen(200px, 200px, 10%, 5px 5px 5px 0px)
+
+
+@mixin boton1($paddig, $font-size, $border-radius, $color, $background-color,$FontW, $border)
+    padding: $paddig
+    font-size: $font-size
+    border-radius: $border-radius
+    color:$color
+    background-color: $background-color
+    font-weight: $FontW
+    border: $border
+
+.comidas__div__button
+        @include boton1(5px 10px, 25px, 20px, white, #9b7e5b, 900, none)
+
+.contenedor-comidas
+    padding: 20px
+    position: relative
+    @include flex-box(center, center, row, flex)
+    height: 500px
+    width: 100%
+    margin: 0px 0px
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url($FondoMain)
+
+.div-comidas
+    margin: 10px 10px
+    background-color: rgba(62, 51, 29, 0.7)
+    border-radius: 50px
+    width: 33%
+    position: relative
+    @include flex-box(center, center, column, flex)
+    height: 100%  
+    gap: 10px  
+    &:hover
+        background-color: rgba(62, 51, 29, 0.9)
+        cursor: pointer
+        scale: 1.05
+        transition: 0.5s ease
+    
+
+.h3
+    color: #ffffff
+    font-size: 20px
+
+.sabores-section
+    @include flex-box(start, start, column, flex)
+    color: black
+    font-weight: 700
+    background-color: #F3D1A7
+    border-radius: 10px
+    padding: 10px 0px
+    gap: 5px
+    width: 250px
+
+.sabores-section
+    gap: 20px
+    width: 80%
+    padding: 10px 10px
+    color: #4E3C27
+    font-weight: 700
+    @include flex-box(center, start, row, flex)
+
+.input-cantidad
+    border-radius: 10px
+    padding: 5px
+    width: 80px
+    border: none
+    &:hover
+        border-color: #4E3C27 
+
+.label
+    gap: 5px
+    color: white
+    font-size: 18px
+    font-weight: 500
+    @include flex-box(center, center, row, flex)
+
+.pedidos
+    @include flex-box(center, center, row, flex)
+    background-color: #8c775e
+    padding: 5px
+    border-radius: 10px
+    color: white
+    font-weight: 800
+    cursor: pointer
+    border: none
+    &:hover
+        background-color: #ffffff
+        color: black
+        transition: 0.5s ease
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
 
 .footer
     gap: 20px
@@ -101,49 +221,55 @@ $FondoRestaurante:"images/fondorestaurante.png"
     color: white
     padding: 20px
     &__title
-        text-align: center
         font-size: 20px
         color: white
         background-color: #806e57
         padding: 10px 15px
         border-radius: 20px
     &__form-container
+        @include flex-box()
         width: 100%
         max-width: 100%
         display: flex
-        justify-content: center
-        align-content: center
         color: black
         &__form
+            @include flex-box()
             display: flex
-            flex-direction: column
             gap: 10px
-
-@mixin imagen($width, $height, $border-radius, $box-shadow)
-    width: $width
-    height: $height
-    border-radius: $border-radius
-    box-shadow: $box-shadow
-    
-.comidas__div__foto
-        @include imagen(200px, 200px, 10%, 5px 5px 0px 0px)
-
-
-@mixin boton1($paddig, $font-size, $border-radius, $color, $background-color,$FontW)
-    padding: $paddig
-    font-size: $font-size
-    border-radius: $border-radius
-    color:$color
-    background-color: $background-color
-    font-weight: $FontW
-
-.comidas__div__button
-        @include boton1(5px 10px, 15px, 20px, white, #9b7e5b, 900)
-
-
-
-
-
+            .nombre-footer
+                font-size: 20px
+            .input-footer
+                border: none
+                padding: 5px
+                border-radius: 10px
+                border-color: black
+            .footer__submit
+                @include boton1(5px 10px, 15px, 20px, white, #9b7e5b, 900, none)
+                &:hover
+                    background-color: #4e3c27
+                    cursor: pointer
+    &__socials
+        @include flex-box(center, center, row, flex)
+        &__item
+            display: flex
+            width: 200px
+            &__image
+                
+                height: 30px
+            &__a
+                text-decoration: none
+                background-color: #806E57
+                border-radius: 0px 10px 10px 0px
+                padding: 0px 20px
+                color: white
+                font-size: 20px
+                display: flex
+                @include flex-box()
+                &:hover
+                    background-color: #34281a
+                    cursor: pointer
+    &__credits
+        color: black
 
 
 

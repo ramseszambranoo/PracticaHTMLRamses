@@ -60,6 +60,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex: wrap;
 }
 .main__comidas__titulo__h2 {
   padding: 10px 10px;
@@ -67,8 +68,10 @@
   font-size: 80px;
   align-content: center;
   font-weight: 900;
+  flex: wrap;
 }
 .main__comidas__titulo2 {
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,6 +93,127 @@
   transition: 0.5s ease;
 }
 
+.comidas__div__foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  box-shadow: 5px 5px 5px 0px;
+}
+
+.comidas__div__button {
+  padding: 5px 10px;
+  font-size: 25px;
+  border-radius: 20px;
+  color: white;
+  background-color: #9b7e5b;
+  font-weight: 900;
+  border: none;
+}
+
+.contenedor-comidas {
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 500px;
+  width: 100%;
+  margin: 0px 0px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("images/fondo.jpg");
+}
+
+.div-comidas {
+  margin: 10px 10px;
+  background-color: rgba(62, 51, 29, 0.7);
+  border-radius: 50px;
+  width: 33%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+}
+.div-comidas:hover {
+  background-color: rgba(62, 51, 29, 0.9);
+  cursor: pointer;
+  scale: 1.05;
+  transition: 0.5s ease;
+}
+
+.h3 {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.sabores-section {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  color: black;
+  font-weight: 700;
+  background-color: #F3D1A7;
+  border-radius: 10px;
+  padding: 10px 0px;
+  gap: 5px;
+  width: 250px;
+}
+
+.sabores-section {
+  gap: 20px;
+  width: 80%;
+  padding: 10px 10px;
+  color: #4E3C27;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+}
+
+.input-cantidad {
+  border-radius: 10px;
+  padding: 5px;
+  width: 80px;
+  border: none;
+}
+.input-cantidad:hover {
+  border-color: #4E3C27;
+}
+
+.label {
+  gap: 5px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.pedidos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #8c775e;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+}
+.pedidos:hover {
+  background-color: #ffffff;
+  color: black;
+  transition: 0.5s ease;
+}
+
 .footer {
   gap: 20px;
   height: 200px;
@@ -101,7 +225,6 @@
   padding: 20px;
 }
 .footer__title {
-  text-align: center;
   font-size: 20px;
   color: white;
   background-color: #806e57;
@@ -109,33 +232,77 @@
   border-radius: 20px;
 }
 .footer__form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   width: 100%;
   max-width: 100%;
   display: flex;
-  justify-content: center;
-  align-content: center;
   color: black;
 }
 .footer__form-container__form {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
   gap: 10px;
 }
-
-.comidas__div__foto {
-  width: 200px;
-  height: 200px;
-  border-radius: 10%;
-  box-shadow: 5px 5px 0px 0px;
+.footer__form-container__form .nombre-footer {
+  font-size: 20px;
 }
-
-.comidas__div__button {
+.footer__form-container__form .input-footer {
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  border-color: black;
+}
+.footer__form-container__form .footer__submit {
   padding: 5px 10px;
   font-size: 15px;
   border-radius: 20px;
   color: white;
   background-color: #9b7e5b;
   font-weight: 900;
+  border: none;
+}
+.footer__form-container__form .footer__submit:hover {
+  background-color: #4e3c27;
+  cursor: pointer;
+}
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.footer__socials__item {
+  display: flex;
+  width: 200px;
+}
+.footer__socials__item__image {
+  height: 30px;
+}
+.footer__socials__item__a {
+  text-decoration: none;
+  background-color: #806E57;
+  border-radius: 0px 10px 10px 0px;
+  padding: 0px 20px;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.footer__socials__item__a:hover {
+  background-color: #34281a;
+  cursor: pointer;
+}
+.footer__credits {
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

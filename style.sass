@@ -44,29 +44,107 @@ $FondoRestaurante:"images/fondorestaurante.png"
 
 .main
     &__section
+        display: flex
+        justify-content: center
+        align-items: center
         padding: 10px 20px
         background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url($FondoRestaurante)
         height: $TamanoMain
         background-repeat: no-repeat
         background-size: cover
+        
         &__h1
-            color: white
+            color: #F3D1A7
             font-size: 50px
-            
-            
-
-@mixin imagen($tamano: auto, )
-    
-    
+            text-shadow: 0px 5px 10px #73624d
             
 
-
-
-footer
+@mixin flex-box($justify:center, $align:center,$direction:row)
     display: flex
-    justify-content: space-evenly
-    gap: 50px
-    background-color: $ColorFooter
+    justify-content: $justify
+    align-items: $align
+    flex-direction: $direction
+
+.main__comidas
+    &__titulo
+        @include flex-box()
+        &__h2
+            padding: 10px 10px
+            color: #4E3C27
+            font-size: 80px
+            align-content: center
+            font-weight: 900
+    &__titulo2
+        @include flex-box()
+        &__p
+            padding: 10px 10px
+            color: white
+            font-size: 30px
+            padding: 10px 20px
+            border-radius: 30px
+            background-color: #4e3c27
+            align-content: center
+            font-weight: 900
+            &:hover
+                background-color: #7b5f3f
+                cursor: pointer
+                transition: 0.5s ease
+
+
+.footer
+    gap: 20px
+    height: 200px
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: #F3D1A7
+    color: white
+    padding: 20px
+    &__title
+        text-align: center
+        font-size: 20px
+        color: white
+        background-color: #806e57
+        padding: 10px 15px
+        border-radius: 20px
+    &__form-container
+        width: 100%
+        max-width: 100%
+        display: flex
+        justify-content: center
+        align-content: center
+        color: black
+        &__form
+            display: flex
+            flex-direction: column
+            gap: 10px
+
+@mixin imagen($width, $height, $border-radius, $box-shadow)
+    width: $width
+    height: $height
+    border-radius: $border-radius
+    box-shadow: $box-shadow
+    
+.comidas__div__foto
+        @include imagen(200px, 200px, 10%, 5px 5px 0px 0px)
+
+
+@mixin boton1($paddig, $font-size, $border-radius, $color, $background-color,$FontW)
+    padding: $paddig
+    font-size: $font-size
+    border-radius: $border-radius
+    color:$color
+    background-color: $background-color
+    font-weight: $FontW
+
+.comidas__div__button
+        @include boton1(5px 10px, 15px, 20px, white, #9b7e5b, 900)
+
+
+
+
+
+
 
 
 

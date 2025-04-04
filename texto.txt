@@ -1,0 +1,19 @@
+@mixin my-mixin($color, $colorTexto)
+    padding: 10px 25px;
+    border: 0px
+    border-radius: 20px
+    background-color: $color
+    color: $colorTexto
+
+
+main
+    .aceptar
+        @include my-mixin(green, black)
+    .eliminar
+        @include my-mixin(purple, yellow)
+
+@mixin flexbox($direction:row, $justify:center, $align:center, $gap: 0px)
+    display: flex
+    flez-direction: $direction
+    justify-content: $justify    
+    align-items: $align

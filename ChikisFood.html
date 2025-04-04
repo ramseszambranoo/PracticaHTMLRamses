@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chiki's Food</title>
-    <link rel="stylesheet" href="style.css">
-
-  
-      
-    
-    </head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
   <body>
     <!--ENCABEZADO DE PAGINA-->
 
     <header class="header">
       <!--BARRA DE NAVEGACION-->
       <nav class="header__nav">
-        
-        <img class="header__nav__logo" src="images/logorestaurant.jpg" alt="logorestaurant">
+        <img
+          class="header__nav__logo"
+          src="images/logorestaurant.jpg"
+          alt="logorestaurant"
+        />
 
         <ul class="header__nav__list">
           <!--BOTON INICIO-->
           <li class="header__nav__list__boton">
-            
-              <a href="#INICIO" >INICIO</a>
-            
+            <a href="#INICIO">INICIO</a>
           </li>
           <!--BOTON COMIDAS-->
           <li class="header__nav__list__boton">
-            
-              <a href="#COMIDAS" >COMIDAS</a>
-            
+            <a href="#COMIDAS">COMIDAS</a>
           </li>
           <!--BOTON CONTACTO-->
           <li class="header__nav__list__boton">
-            
-              <a href="#CONTACTO" >CONTACTO</a>
-            
+            <a href="#CONTACTO">CONTACTO</a>
           </li>
         </ul>
       </nav>
@@ -45,26 +37,31 @@
 
     <!--CONTENIDO PRINCIPAL-->
     <main class="main">
-
       <section class="main__section">
-
-      <h1 class="main__section__h1">¡Bienvenidos a ChikisFood!</h1>
-
-    </section>
-
-
+        <h1 class="main__section__h1">¡Bienvenidos a ChikisFood!</h1>
+      </section>
 
       <!--SECCION DE COMIDAS-->
-      <section class="comidas">
-        <h2 class="comidas__h2">NUESTRAS COMIDAS</h2>
-        <p class="comidas__p">ESTOS SON NUESTROS PLATOS</p>
+      <section class="main__comidas">
+        <section class="main__comidas__titulo">
+          <h2 class="main__comidas__titulo__h2">NUESTRAS COMIDAS</h2>
+        </section>
+        <section class="main__comidas__titulo2">
+          <p class="main__comidas__titulo2__p">ESTOS SON NUESTROS PLATOS</p>
+        </section>
+
         <!--AREPAS-->
         <div class="comidas__div">
           <button class="comidas__div__button">AREPAS</button>
-          <img class="comidas__div__foto" src="images/AREPAS.png" alt="Arepas" height="200" />
+          <img
+            class="comidas__div__foto"
+            src="images/AREPAS.png"
+            alt="Arepas"
+            height="200"
+          />
           <h3>ESCOGE TU RELLENO:</h3>
 
-          <ul >
+          <ul>
             <label for="sabores">
               <input type="radio" name="sabores" id="sabores" />
               POLLO
@@ -77,7 +74,7 @@
               CARNE
             </label>
           </ul>
-          
+
           <ul>
             <label for="sabores">
               <input type="radio" name="sabores" id="sabores" />
@@ -100,14 +97,23 @@
             ><button>→ HAZ TU PEDIDO AQUI ←</button></a
           >
         </div>
+        
+
+        
+
 
 
         <!--EMPANADAS-->
-        <br />
+
         <div>
-          <button><h3>EMPANADAS</h3></button>
-          <br />
-          <img src="images/EMPANADAS.png" alt="EMPANADAS" height="200" />
+          <button class="comidas__div__button">EMPANADAS</button>
+      
+          <img
+            class="comidas__div__foto"
+            src="images/EMPANADAS.png"
+            alt="EMPANADAS"
+            height="200"
+          />
           <h3>ESCOGE TU RELLENO:</h3>
           <ul>
             <label for="empanadas">
@@ -138,19 +144,24 @@
               id="empanadas"
               placeholder="ej: 1, 2, 3, 4, ..."
           /></label>
-          <br />
-          <br />
+          
+          
           <a href="RedesSociales/pedidos.html" target="_blank"
             ><button>→ HAZ TU PEDIDO AQUI ←</button></a
           >
         </div>
 
-        <br />
 
+
+
+
+
+        
+
+        <!--pabellon-->
         <div>
-          <button><h3>PABELLON</h3></button>
-          <br />
-          <img src="images/PABELLON.png" alt="PABELLON" height="200" />
+          <button class="comidas__div__button">PABELLON</button>
+          <img class="comidas__div__foto" src="images/PABELLON.png" alt="PABELLON" height="200" />
           <h3>PABELLON CRIOLLO VENEZOLANO</h3>
           <p>
             <span style="background-color: rgb(255, 233, 185)"
@@ -178,46 +189,51 @@
             <input type="checkbox" name="PABELLON" id="PABELLON" />
             ENSALADA DE REPOLLO</label
           >
-
-          <br />
-          <br />
-
           <a href="RedesSociales/pedidos.html" target="_blank"
             ><button>→ HAZ TU PEDIDO AQUI ←</button></a
           >
         </div>
-        <br />
         
       </section>
     </main>
 
     <!--PIE DE PAGINA-->
-    <footer id="CONTACTO" style="background-color: rgb(184, 184, 184)">
-      <h2>SUSCRIBETE PARA NUEVAS PROMOCIONES Y ACTUALIZACIONES</h2>
-
-      <form action="">
-        <label for="Nombre">Nombre</label>
-        <input type="text" name="Nombre" id="Nombre" required />
-
-        <label for="Apellido">Apellido</label>
-        <input type="text" name="Apellido" id="Apellido" required />
-
-        <label for="email">Correo Electronico</label>
-        <input type="email" name="email" id="email" required />
-
-        <input type="submit" value="Suscribirse" />
-      </form>
-
-      <p>ChikisFood 2025. © Todos los derechos reservados</p>
-      <!--TWITTER-->
-      <img src="images/twiter.png" alt="Twitter" height="20" />
-      <a href="RedesSociales/Twitter.html">Twitter</a>
-      <!--INSTAGRAM-->
-      <img src="images/instagram.png" alt="Instagram" height="20" />
-      <a href="RedesSociales/Instagram.html">Instagram</a>
-      <!--FACEBOOK-->
-      <img src="images/facebook.png" alt="facebook" height="20" />
-      <a href="RedesSociales/Facebook.html">Facebook</a>
+    <footer class="footer">
+      <h2 class="footer__title">Suscríbete para nuevas promociones y actualizaciones</h2>
+    
+      <section class="footer__form-container">
+        
+        <form class="footer__form" action="">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" required />
+    
+          <label for="apellido">Apellido</label>
+          <input type="text" name="apellido" id="apellido" required />
+    
+          <label for="email">Correo Electrónico</label>
+          <input type="email" name="email" id="email" required />
+    
+          <input class="footer__submit" type="submit" value="Suscribirse" />
+        </form>
+      </section>
+    
+      <section class="footer__socials">
+        <div class="footer__social-item">
+          <img src="images/twitter.png" alt="Twitter" height="20" />
+          <a href="RedesSociales/Twitter.html">Twitter</a>
+        </div>
+        <div class="footer__social-item">
+          <img src="images/instagram.png" alt="Instagram" height="20" />
+          <a href="RedesSociales/Instagram.html">Instagram</a>
+        </div>
+        <div class="footer__social-item">
+          <img src="images/facebook.png" alt="Facebook" height="20" />
+          <a href="RedesSociales/Facebook.html">Facebook</a>
+        </div>
+      </section>
+    
+      <p class="footer__credits">ChikisFood 2025. © Todos los derechos reservados</p>
     </footer>
+    
   </body>
 </html>
